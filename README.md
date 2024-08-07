@@ -83,7 +83,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [PokeAPI](https://pokeapi.co/) for providing the Pokemon data
 - The Pokemon Company for the inspiration and color scheme
 
-## Contact
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
 
-Project Link: [https://github.com/yourusername/modern-pokedex](https://github.com/yourusername/modern-pokedex)
+- Project Link: [https://github.com/yourusername/modern-pokedex](https://github.com/yourusername/modern-pokedex)
