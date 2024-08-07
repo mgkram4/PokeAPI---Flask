@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F0F0F0;
+    background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23000000" fill-opacity="0.05" fill-rule="evenodd"%3E%3Ccircle cx="20" cy="20" r="10"/%3E%3C/g%3E%3C/svg%3E');
+}
+
+h1, h2 {
+    color: #EE1515;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px #FECB65;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    width: 60%;
+    background-color: white;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="submit"] {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #3D7DCA;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background-color: #EE1515;
+    transform: scale(1.05);
+}
+
+.error {
+    color: #EE1515;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pokemon-info {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.sprite-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sprite-container img {
+    max-width: 120px;
+    transition: transform 0.3s;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+}
+
+.sprite-container img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.info-section {
+    margin-bottom: 30px;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.info-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-section h2 {
+    border-bottom: 3px solid #FECB65;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stat-bar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #3D7DCA;
+    transition: width 1s ease-in-out;
+}
+
+a {
+    display: block;
+    text-align: center;
+    background-color: #FECB65;
+    color: #333333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    background-color: #EE1515;
+    color: white;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pokemon-info {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+.pokemon-list a {
+    background-color: #F0F0F0;
+    color: #333333;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.pokemon-list a:hover {
+    background-color: #3D7DCA;
+    color: white;
+    transform: scale(1.05);
+}

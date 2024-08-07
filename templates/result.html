@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon: {{ pokemon.name.capitalize() }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="pokemon-info">
+        <h1>{{ pokemon.name.capitalize() }}</h1>
+        
+        <div class="sprite-container">
+            <img src="{{ pokemon.sprites.front_default }}" alt="{{ pokemon.name }} front">
+            <img src="{{ pokemon.sprites.back_default }}" alt="{{ pokemon.name }} back">
+            <img src="{{ pokemon.sprites.front_shiny }}" alt="{{ pokemon.name }} shiny front">
+            <img src="{{ pokemon.sprites.back_shiny }}" alt="{{ pokemon.name }} shiny back">
+        </div>
+
+        <div class="info-section">
+            <h2>Basic Information</h2>
+            <ul>
+                <li>ID: {{ pokemon.id }}</li>
+                <li>Height: {{ pokemon.height / 10 }} m</li>
+                <li>Weight: {{ pokemon.weight / 10 }} kg</li>
+                <li>Base Experience: {{ pokemon.base_experience }}</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>Types</h2>
+            <ul>
+            {% for type in pokemon.types %}
+                <li>{{ type.capitalize() }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>Abilities</h2>
+            <ul>
+            {% for ability in pokemon.abilities %}
+                <li>{{ ability.capitalize() }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>Stats</h2>
+            {% for stat, value in pokemon.stats.items() %}
+                <div class="stat">
+                    <span>{{ stat.capitalize() }}</span>
+                    <span>{{ value }}</span>
+                </div>
+                <div class="stat-bar" style="width: {{ (value / 255) * 100 }}%;"></div>
+            {% endfor %}
+        </div>
+
+        <div class="info-section">
+            <h2>Moves (first 5)</h2>
+            <ul>
+            {% for move in pokemon.moves %}
+                <li>{{ move.capitalize() }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>Game Versions</h2>
+            <ul>
+            {% for version in pokemon.versions %}
+                <li>{{ version.capitalize() }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <a href="/">Search Another Pokemon</a>
+</body>
+</html>
