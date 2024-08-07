@@ -1,62 +1,63 @@
-Modern Pokedex Web Application
-Description
+# Modern Pokedex Web Application
+
+## Description
 This project is a modern, web-based Pokedex application built with Flask and the PokeAPI. It allows users to search for Pokemon, view detailed information about each Pokemon, and browse a comprehensive list of all available Pokemon.
-Features
 
-Search for Pokemon by name
-Display detailed information about each Pokemon, including:
+## Features
+- Search for Pokemon by name
+- Display detailed information about each Pokemon, including:
+  - Basic stats (ID, height, weight, base experience)
+  - Types
+  - Abilities
+  - Base stats with visual representation
+  - Moves (first 5)
+  - Game versions the Pokemon appears in
+- View sprites of each Pokemon (normal and shiny, front and back)
+- Browse a complete list of all available Pokemon
+- Modern, responsive design with Pokemon-inspired styling
 
-Basic stats (ID, height, weight, base experience)
-Types
-Abilities
-Base stats with visual representation
-Moves (first 5)
-Game versions the Pokemon appears in
+## Technologies Used
+- Python 3.x
+- Flask
+- HTML5
+- CSS3
+- PokeAPI
 
+## Setup and Installation
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/modern-pokedex.git
+   cd modern-pokedex
+   ```
 
-View sprites of each Pokemon (normal and shiny, front and back)
-Browse a complete list of all available Pokemon
-Modern, responsive design with Pokemon-inspired styling
+2. Create a virtual environment and activate it:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
 
-Technologies Used
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-Python 3.x
-Flask
-HTML5
-CSS3
-PokeAPI
+4. Run the Flask application:
+   ```
+   python app.py
+   ```
 
-Setup and Installation
+5. Open your web browser and navigate to `http://127.0.0.1:5000/`
 
-Clone the repository:
-Copygit clone https://github.com/yourusername/modern-pokedex.git
-cd modern-pokedex
+## Usage
+- On the home page, you can either:
+  - Enter a Pokemon name in the search bar and click "Search"
+  - Click on any Pokemon name from the list of all Pokemon
+- View the detailed information about the selected Pokemon
+- Click "Search Another Pokemon" to return to the home page
 
-Create a virtual environment and activate it:
-Copypython -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-
-Install the required dependencies:
-Copypip install -r requirements.txt
-
-Run the Flask application:
-Copypython app.py
-
-Open your web browser and navigate to http://127.0.0.1:5000/
-
-Usage
-
-On the home page, you can either:
-
-Enter a Pokemon name in the search bar and click "Search"
-Click on any Pokemon name from the list of all Pokemon
-
-
-View the detailed information about the selected Pokemon
-Click "Search Another Pokemon" to return to the home page
-
-Project Structure
-Copymodern-pokedex/
+## Project Structure
+```
+modern-pokedex/
 │
 ├── app.py                  # Main Flask application
 ├── requirements.txt        # Project dependencies
@@ -65,18 +66,24 @@ Copymodern-pokedex/
 └── templates/
     ├── index.html          # Home page template
     └── result.html         # Pokemon details page template
-Contributing
+```
+
+## Contributing
 Contributions to improve the project are welcome. Please follow these steps:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Fork the repository
-Create a new branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-Acknowledgments
+## Acknowledgments
+- [PokeAPI](https://pokeapi.co/) for providing the Pokemon data
+- The Pokemon Company for the inspiration and color scheme
 
-PokeAPI for providing the Pokemon data
-The Pokemon Company for the inspiration and color scheme
+## Contact
+Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+
+Project Link: [https://github.com/yourusername/modern-pokedex](https://github.com/yourusername/modern-pokedex)
